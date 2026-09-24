@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instant Estimate | Renofy</title>
+<meta name="description" content="Get an instant renovation ballpark: pick your project, drag the size, choose a finish. No email required.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500&family=Didact+Gothic&family=Allura&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=10">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+</head>
+<body data-page="estimate">
+
+<div id="site-header"></div>
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <div class="container reveal">
+    <span class="kicker">No email required</span>
+    <h1 class="display">What will it cost? <span class="grad-copper">About 20 seconds.</span></h1>
+    <p class="lead">Pick your project, drag the size, choose a finish. Instant math, zero sales calls.</p>
+  </div>
+</header>
+
+<!-- ============ ESTIMATOR ============ -->
+<section class="section" style="padding-top:1rem">
+  <div class="container">
+    <div class="est-shell">
+      <div class="est-controls reveal">
+        <div class="field">
+          <label id="typeLabel">Project type</label>
+          <div class="seg" id="typeSeg" role="group" aria-labelledby="typeLabel">
+            <button type="button" data-type="kitchen" class="on">Kitchen</button>
+            <button type="button" data-type="bathroom">Bathroom</button>
+            <button type="button" data-type="basement">Basement</button>
+            <button type="button" data-type="flooring">Flooring</button>
+            <button type="button" data-type="painting">Painting</button>
+            <button type="button" data-type="fullhome">Full Home</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="sizeRange">Size</label>
+          <input type="range" id="sizeRange" min="100" max="3000" step="10" value="200">
+          <div class="range-val" id="rangeVal">200 sq ft</div>
+        </div>
+        <div class="field">
+          <label id="finishLabel">Finish level</label>
+          <div class="seg" id="finishSeg" role="group" aria-labelledby="finishLabel">
+            <button type="button" data-finish="refresh">Refresh<small>Smart updates</small></button>
+            <button type="button" data-finish="designer" class="on">Designer<small>Full redesign</small></button>
+            <button type="button" data-finish="luxe">Luxe<small>Top everything</small></button>
+          </div>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <div id="estResult"></div>
+        <p class="disclaimer">Ballpark only — your fixed quote comes free after a 30-minute consult.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="cta-band">
+  <div class="container reveal">
+    <span class="kicker" style="justify-content:center">Free consults · Fixed quotes</span>
+    <h2 class="display">Your dream space is <span class="grad-copper">one call away.</span></h2>
+    <p class="lead" style="margin:1rem auto 2rem;color:#d6d6de">Tell us about the room you're tired of. We'll bring the ideas, the timeline, and the fixed price.</p>
+    <div class="hero-ctas" style="justify-content:center">
+      <a href="tel:+16476733696" class="btn magnetic">Call (647) 673 3696</a>
+      <a href="contact.html" class="btn btn-ghost magnetic">Get a free quote</a>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<!-- floating widgets -->
+<aside id="live-ticker" aria-live="polite">
+  <span class="lt-dot"></span><p></p>
+  <button class="lt-x" aria-label="Dismiss notification">×</button>
+</aside>
+<button id="to-top" aria-label="Back to top">↑</button>
+<a id="call-fab" href="tel:+16476733696" aria-label="Call Renofy now">☎</a>
+
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/estimate.js"></script>
+</body>
+</html>

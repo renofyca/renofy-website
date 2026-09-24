@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style Quiz | Renofy</title>
+<meta name="description" content="Four questions, thirty seconds: discover your renovation style — Dark Luxe, Warm Modern or Classic Fresh — then estimate the project.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500&family=Didact+Gothic&family=Allura&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=10">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+</head>
+<body data-page="quiz">
+
+<div id="site-header"></div>
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <div class="container reveal">
+    <span class="kicker">Interactive</span>
+    <h1 class="display">Discover your <span class="grad-teal">renovation style.</span></h1>
+    <p class="lead">Four questions. Thirty seconds. One style that feels like you.</p>
+  </div>
+</header>
+
+<!-- ============ QUIZ ============ -->
+<section class="section" style="padding-top:1rem">
+  <div class="container">
+    <div class="quiz-shell reveal">
+      <div class="quiz-progress" aria-hidden="true"><i id="quizBar"></i></div>
+      <div id="quizBody"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="cta-band">
+  <div class="container reveal">
+    <span class="kicker" style="justify-content:center">Free consults · Fixed quotes</span>
+    <h2 class="display">Your dream space is <span class="grad-copper">one call away.</span></h2>
+    <p class="lead" style="margin:1rem auto 2rem;color:#d6d6de">Tell us about the room you're tired of. We'll bring the ideas, the timeline, and the fixed price.</p>
+    <div class="hero-ctas" style="justify-content:center">
+      <a href="tel:+16476733696" class="btn magnetic">Call (647) 673 3696</a>
+      <a href="estimate.html" class="btn btn-ghost magnetic">Instant estimate</a>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<!-- floating widgets -->
+<aside id="live-ticker" aria-live="polite">
+  <span class="lt-dot"></span><p></p>
+  <button class="lt-x" aria-label="Dismiss notification">×</button>
+</aside>
+<button id="to-top" aria-label="Back to top">↑</button>
+<a id="call-fab" href="tel:+16476733696" aria-label="Call Renofy now">☎</a>
+
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/quiz.js"></script>
+</body>
+</html>
