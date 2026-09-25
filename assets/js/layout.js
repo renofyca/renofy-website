@@ -57,6 +57,12 @@
           '<li><a href="services.html#service-painting">Painting</a></li>' +
           '<li><a href="services.html#service-stone">Quartz &amp; Quartzite</a></li>' +
         '</ul></div>' +
+        '<div><h4>Resources</h4><ul>' +
+          '<li><a href="faq.html">Renovation FAQs</a></li>' +
+          '<li><a href="areas.html">Service Areas</a></li>' +
+          '<li><a href="kitchen-renovation-cost-toronto.html">Kitchen Cost Guide</a></li>' +
+          '<li><a href="bathroom-renovation-cost-toronto.html">Bathroom Cost Guide</a></li>' +
+        '</ul></div>' +
         '<div><h4>Get in touch</h4><ul class="foot-contact">' +
           '<li><b>Phone&nbsp;</b><a href="tel:+16476733696">+1 (647) 673 3696</a></li>' +
           '<li><b>Email&nbsp;</b><a href="mailto:info@renofy.ca">info@renofy.ca</a></li>' +
