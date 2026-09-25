@@ -39,7 +39,7 @@
           '<a class="brand" href="index.html"><img src="assets/logo.png?v=6" alt="Renofy logo">' +
           '<span class="wordmark grad-silver">RENOFY<small>Renovate · Redefine · Reimagine</small></span></a>' +
           '<p>Toronto\'s boldest renovation crew. We turn tired rooms into the reason you rush home — on time, on budget, and built to be stared at.</p>' +
-          '<span class="script" style="font-size:1.6rem;color:var(--copper)">Building Better Spaces</span>' +
+          '<span class="script" style="font-size:1.6rem">Building Better Spaces</span>' +
         '</div>' +
         '<div><h4>Explore</h4><ul>' +
           '<li><a href="index.html">Home</a></li>' +

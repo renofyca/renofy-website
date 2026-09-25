@@ -54,7 +54,7 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
 .grad-silver{background:var(--silver-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .grad-teal{background:linear-gradient(100deg,#7ff5e6,var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
 .grad-copper{background:linear-gradient(100deg,#ffcf8f,var(--copper));-webkit-background-clip:text;background-clip:text;color:transparent}
-.script{font-family:var(--font-script);font-weight:400;text-transform:none;letter-spacing:0}
+.script{font-family:var(--font-script);font-weight:400;text-transform:none;letter-spacing:0;display:inline-block;background:linear-gradient(110deg,#8a5f2b 0%,#d99a45 22%,#fff3d6 50%,#d99a45 78%,#8a5f2b 100%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;clip-path:inset(0 100% 0 0)}.script.in{animation:script-write 1.5s cubic-bezier(.45,0,.2,1) forwards,script-shine 4.5s linear 1.5s infinite}@keyframes script-write{to{clip-path:inset(0 0 0 0)}}@keyframes script-shine{to{background-position:220% center}}@media (prefers-reduced-motion:reduce){.script{clip-path:none}.script.in{animation:none}}
 .kicker{
   display:inline-flex;align-items:center;gap:.6rem;
   font-family:var(--font-body);font-size:.78rem;font-weight:600;
@@ -136,7 +136,7 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
 .hero h1 .row:nth-child(2)>span{animation-delay:.14s}
 .hero h1 .row:nth-child(3)>span{animation-delay:.28s}
 @keyframes riseUp{to{transform:translateY(0)}}
-.hero .script{font-size:clamp(1.6rem,3.4vw,2.6rem);color:var(--copper);text-shadow:0 0 30px rgba(232,147,60,.4)}
+.hero .script{font-size:clamp(1.6rem,3.4vw,2.6rem);filter:drop-shadow(0 0 22px rgba(232,147,60,.35))}
 .hero-sub{color:#d6d6de;max-width:56ch;font-size:1.08rem;margin-bottom:2.2rem}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
 .hero-chips{position:absolute;z-index:3;right:4%;bottom:14%;display:flex;flex-direction:column;gap:.8rem}
@@ -154,7 +154,7 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
 /* page hero (interior pages) */
 .page-hero{padding:calc(var(--header-h) + 4rem) 0 4rem;position:relative;overflow:hidden;background:radial-gradient(80% 120% at 50% 0%,#16161d 0%,var(--bg) 70%)}
 .page-hero h1{font-size:clamp(2.4rem,6vw,4.4rem)}
-.page-hero .script{font-size:clamp(1.4rem,3vw,2.2rem);color:var(--copper)}
+.page-hero .script{font-size:clamp(1.4rem,3vw,2.2rem)}
 
 /* ---------- STEP INSIDE tour ---------- */
 .tour-wrap{position:relative;height:700vh;background:#060607}
@@ -308,7 +308,7 @@ footer{border-top:1px solid var(--line);background:#08080a;padding:4.5rem 0 0}
 .foot-contact li{display:flex;gap:.7rem;align-items:flex-start}
 .foot-contact b{color:var(--text)}
 .foot-bottom{border-top:1px solid var(--line);padding:1.4rem 0;display:flex;justify-content:space-between;align-items:center;gap:1rem;color:var(--faint);font-size:.82rem;flex-wrap:wrap}
-.foot-bottom .script{font-size:1.3rem;color:var(--copper)}
+.foot-bottom .script{font-size:1.3rem}
 
 /* ---------- forms ---------- */
 .field{margin-bottom:1.2rem}
