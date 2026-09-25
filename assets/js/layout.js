@@ -22,7 +22,7 @@
   document.getElementById('site-header').innerHTML =
     '<div class="container nav-inner">' +
       '<a class="brand" href="index.html" aria-label="Renofy home">' +
-        '<img src="assets/logo-white.png?v=1" alt="Renofy logo">' +
+        '<img src="assets/logo.png?v=5" alt="Renofy logo">' +
         '<span class="wordmark grad-silver">RENOFY<small>Renovate · Redefine · Reimagine</small></span>' +
       '</a>' +
       '<ul class="nav-links" id="navLinks">' + links + '</ul>' +
@@ -36,7 +36,7 @@
     '<div class="container">' +
       '<div class="foot-grid">' +
         '<div class="foot-brand">' +
-          '<a class="brand" href="index.html"><img src="assets/logo-white.png?v=1" alt="Renofy logo">' +
+          '<a class="brand" href="index.html"><img src="assets/logo.png?v=5" alt="Renofy logo">' +
           '<span class="wordmark grad-silver">RENOFY<small>Renovate · Redefine · Reimagine</small></span></a>' +
           '<p>Toronto\'s boldest renovation crew. We turn tired rooms into the reason you rush home — on time, on budget, and built to be stared at.</p>' +
           '<span class="script" style="font-size:1.6rem;color:var(--copper)">Building Better Spaces</span>' +
