@@ -67,7 +67,7 @@
           '<li><b>Phone&nbsp;</b><a href="tel:+16476733696">+1 (647) 673 3696</a></li>' +
           '<li><b>Email&nbsp;</b><a href="mailto:info@renofy.ca">info@renofy.ca</a></li>' +
           '<li><b>Hours&nbsp;</b><span>Mon–Sat, 8am–6pm</span></li>' +
-          '<li><b>Areas&nbsp;</b><span>Toronto · Etobicoke · Mississauga · Vaughan · Markham · Scarborough · North York</span></li>' +
+          '<li><b>Areas&nbsp;</b><span>Toronto & the GTA · Hamilton · Niagara · Waterloo Region · Barrie · London & beyond</span></li>' +
         '</ul></div>' +
       '</div>' +
       '<div class="foot-bottom">' +

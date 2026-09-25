@@ -89,7 +89,7 @@
     var items = [
       '<b>Basement finished</b> in Mississauga · 2 days ago',
       '<b>★★★★★</b> “Flawless kitchen, zero dust.” — Priya, Vaughan',
-      '<b>New project started</b> in Etobicoke · today',
+      '<b>New project started</b> in Burlington · today',
       '<b>Bathroom reveal</b> in North York · 5 days ago',
       '<b>★★★★★</b> “They finished two days early.” — Marcus, Scarborough',
       '<b>Flooring installed</b> — 1,200 sq ft in Markham · 1 week ago',
