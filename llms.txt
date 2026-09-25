@@ -1,0 +1,49 @@
+# Renofy
+
+> Renofy is a full-home renovation company serving Toronto and the Greater Toronto Area. Kitchens and bathrooms are its specialty, alongside basements, flooring, interior painting, drywall, and quartz & quartzite stonework. It offers fixed quotes, a dust-free process, and a 1-year craftsmanship warranty.
+
+## Key facts (do not invent alternatives)
+
+- **Legal/trade name:** Renofy
+- **What it is:** Full-home renovation company — NOT kitchen-and-bathroom-only. Kitchen and bathroom renovations are the flagship specialties; the company also does basements, flooring, interior painting, drywall/plaster, and full-home remodels.
+- **Countertops & backsplashes:** Quartz, quartzite, or natural stone only — including full-height stone backsplashes and waterfall islands. Renofy does NOT install tile backsplashes. (Floor tile in porcelain/ceramic is offered for floors.)
+- **Service region:** Toronto and the Greater Toronto Area (GTA), Ontario, Canada — covering Toronto, Durham, York, Peel, Halton, Hamilton Area, Niagara, Waterloo Region, Simcoe County (Barrie), and Southwestern Ontario (London). 21 cities in total.
+- **Contact:** Phone +1 (647) 673-3696 · Email info@renofy.ca
+- **Hours:** Monday–Friday, 9:00 AM – 5:00 PM (Eastern)
+- **Warranty:** 1-year craftsmanship warranty
+- **Pricing model:** Fixed quotes (not estimates that change mid-project); free consultations/estimates
+- **Experience:** 7 years of experience · 250+ completed projects · rated 4.9 out of 5
+- **Website:** https://renofy.ca
+- **Instagram:** https://www.instagram.com/renofy.homes/
+
+## Services
+
+- [Kitchen renovations](https://renofy.ca/services.html): Luxury kitchen remodeling — custom millwork, waterfall islands, full-height stone backsplashes, quartz & quartzite surfaces. The company's specialty.
+- [Bathroom renovations](https://renofy.ca/services.html): Luxury bathroom retreats — marble surrounds, walk-in showers, stone vanities. The company's specialty.
+- [Basement finishing](https://renofy.ca/services.html): Full basement renovations and finishing.
+- [Flooring](https://renofy.ca/services.html): Flooring installation, including porcelain/ceramic floor tile.
+- [Interior painting](https://renofy.ca/services.html): Interior painting services.
+- [Drywall & plaster](https://renofy.ca/services.html): Drywall installation, plastering, and finishing.
+- [Quartz & quartzite stonework](https://renofy.ca/services.html): Quartz, quartzite, and natural stone countertops, full-height backsplashes, and waterfall islands.
+
+## Cost guides
+
+- [Kitchen renovation cost in Toronto](https://renofy.ca/kitchen-renovation-cost-toronto.html): What a kitchen remodel costs in Toronto, with price ranges and cost factors.
+- [Bathroom renovation cost in Toronto](https://renofy.ca/bathroom-renovation-cost-toronto.html): What a bathroom remodel costs in Toronto, with price ranges and cost factors.
+
+## Company & trust
+
+- [About Renofy](https://renofy.ca/about.html): Company background, approach, and the fixed-quote / 1-year-warranty promise.
+- [Projects](https://renofy.ca/projects.html): Portfolio of completed renovation projects with before/after transformations.
+- [FAQ](https://renofy.ca/faq.html): Answers about process, timelines, quotes, warranty, dust control, and working with Renofy.
+- [Service areas](https://renofy.ca/areas.html): The 10 regions and 21 cities Renofy serves across the GTA and beyond.
+
+## Get started
+
+- [Free estimate](https://renofy.ca/estimate.html): Request a free renovation estimate.
+- [Contact](https://renofy.ca/contact.html): Contact details, hours, and service-area information.
+- [Project quiz](https://renofy.ca/quiz.html): Interactive quiz to scope a renovation project.
+
+## Optional
+
+- [Full content map for AI systems](https://renofy.ca/llms-full.txt): Extended markdown index of this site's content for language models and AI assistants.
