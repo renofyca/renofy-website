@@ -96,7 +96,6 @@
   /* ---------- knowledge base ---------- */
   var PHONE = '+1 (647) 673-3696';
   var PHONE_LINK = 'tel:+16476733696';
-  var ZOHO_FORM = 'https://forms.zohopublic.ca/virtualoffice1inforen11/form/RenofyEnquiryForm/formperma/LGM1GlU7BZvQH5N7vCPk_yAilg-trxUXPwxeA0MGD9Q';
   var ZOHO_BOOK = 'https://renofy.zohobookings.ca/renofy';
   var WHATSAPP_NUMBER = '16476733696'; // business line doubles as WhatsApp
   function waLink(text) {
@@ -149,7 +148,7 @@
       msg: 'Typical timelines: painting 2\u20133 days, flooring 3\u20135 days, bathrooms 3\u20134 weeks, kitchens 4\u20136 weeks, full-home remodels 8\u201316 weeks. Your fixed quote includes a firm schedule before we start.' },
     { re: /\b(enquir(y|ies)|inquir(y|ies)|enquire)\b|\bform\b/i,
       msg: 'Tell us about your project \u2014 it takes a minute and lands straight with our team:<br><br>' +
-        '<a class="wa-btn" href="' + ZOHO_FORM + '" target="_blank" rel="noopener">\uD83D\uDCDD Open the enquiry form</a><br><br>' +
+        '<a class="wa-btn" href="contact.html">\uD83D\uDCDD Open the enquiry form</a><br><br>' +
         'Or <a href="contact.html">see all the ways to reach us \u2192</a>' },
     { re: /\b(book|consult|appointment|quote|estimate|callback|call me|call back|talk)\b/i, fn: 'BOOK' },
     { re: /\b(bot|ai|robot|artificial|who are you|your name)\b/i,
