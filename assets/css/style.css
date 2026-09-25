@@ -1,4 +1,4 @@
-@font-face{font-family:'Priestacy';src:url('../fonts/priestacy.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Modernline';src:url('../fonts/modernline.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 /* ============================================================
    RENOFY — dark cinematic luxury design system
    Palette: near-black / charcoal / silver / teal / copper
@@ -21,7 +21,7 @@
   --font-display:Optima,'Alegreya Sans',Candara,'Segoe UI',system-ui,sans-serif;
   --font-logo:Optima,'Alegreya Sans',Candara,'Segoe UI',system-ui,sans-serif;
   --font-body:Optima,'Alegreya Sans',Candara,'Segoe UI',system-ui,sans-serif;
-  --font-script:'Priestacy',cursive;
+  --font-script:'Modernline',cursive;
   --font-gothic:'Century Gothic','Didact Gothic',CenturyGothic,AppleGothic,sans-serif;
   --radius:18px;
   --header-h:76px;
