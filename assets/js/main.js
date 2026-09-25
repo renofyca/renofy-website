@@ -19,18 +19,6 @@
     revealEls.forEach(function(el){ el.classList.add('in'); });
   }
 
-  /* ---------- handwriting script words ---------- */
-  var scriptEls = document.querySelectorAll('.script');
-  if('IntersectionObserver' in window && !prefersReduced){
-    var so = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){ e.target.classList.add('in'); so.unobserve(e.target); }
-      });
-    },{threshold:.4});
-    scriptEls.forEach(function(el){ so.observe(el); });
-  } else {
-    scriptEls.forEach(function(el){ el.classList.add('in'); });
-  }
 
   /* ---------- animated counters ---------- */
   var counters = document.querySelectorAll('.count[data-to]');
