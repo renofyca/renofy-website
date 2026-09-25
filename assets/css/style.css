@@ -507,11 +507,22 @@ input[type=range]{width:100%;accent-color:var(--copper);margin-top:.8rem}
   .nav-links{background:rgba(8,8,11,.93);backdrop-filter:blur(24px) saturate(1.4);-webkit-backdrop-filter:blur(24px) saturate(1.4);border-bottom:1px solid var(--glass-border);box-shadow:var(--glass-hi),0 30px 60px rgba(0,0,0,.5)}
 }
 
-/* premium CTA band */
-.cta-band::before{background:rgba(8,8,10,.8)}
+/* premium CTA band — dark mockup treatment */
+.cta-band{background:#060608}
+.cta-band::before{content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(640px 320px at 88% 108%, rgba(184,134,90,.17), transparent 70%),
+    radial-gradient(560px 300px at 8% -10%, rgba(45,212,191,.08), transparent 70%),
+    rgba(6,6,8,.9)}
 .cta-band::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:repeating-linear-gradient(115deg,transparent 0 46px,rgba(255,255,255,.03) 46px 47px)}
+  background:repeating-linear-gradient(115deg,transparent 0 16px,rgba(255,255,255,.055) 16px 17px)}
 .cta-band .kicker{justify-content:center}
-.cta-band .kicker::after{content:"";width:34px;height:2px;background:var(--grad-brand);border-radius:2px}
-.cta-band h2{font-weight:600;letter-spacing:-.015em}
+.cta-band .kicker::after{content:"";width:44px;height:2px;background:var(--grad-brand);border-radius:2px}
+.cta-band h2{font-size:clamp(2.6rem,6.5vw,4.5rem);font-weight:700;letter-spacing:-.02em;text-wrap:balance}
+.cta-band .btn{box-shadow:0 10px 34px rgba(184,134,90,.38)}
 .cta-band .btn-ghost{background:rgba(10,10,14,.55);border-color:rgba(255,255,255,.17)}
+@media(max-width:720px){
+  .cta-band .kicker{font-size:.68rem;letter-spacing:.28em}
+  .cta-band .kicker::before,.cta-band .kicker::after{width:26px}
+  .cta-band h2{font-size:clamp(2.2rem,9vw,3rem)}
+}
