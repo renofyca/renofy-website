@@ -96,12 +96,14 @@
   /* ---------- knowledge base ---------- */
   var PHONE = '+1 (647) 673-3696';
   var PHONE_LINK = 'tel:+16476733696';
+  var ZOHO_FORM = 'https://forms.zohopublic.ca/virtualoffice1inforen11/form/RenofyEnquiryForm/formperma/LGM1GlU7BZvQH5N7vCPk_yAilg-trxUXPwxeA0MGD9Q';
+  var ZOHO_BOOK = 'https://renofy.zohobookings.ca/renofy';
   var WHATSAPP_NUMBER = '16476733696'; // business line doubles as WhatsApp
   function waLink(text) {
     return 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text);
   }
 
-  var MAIN_CHIPS = ['\uD83D\uDCB0 Pricing', '\uD83D\uDD28 Services', '\uD83D\uDCCD Service areas', '\uD83D\uDCC5 Book a consultation', '\uD83D\uDCAC WhatsApp us'];
+  var MAIN_CHIPS = ['\uD83D\uDCB0 Pricing', '\uD83D\uDD28 Services', '\uD83D\uDCCD Service areas', '\uD83D\uDCC5 Book a consultation', '\uD83D\uDCDD Enquiry form', '\uD83D\uDCAC WhatsApp us'];
 
   function pricingMsg() {
     return 'Here are our starting prices:<br>' +
@@ -145,6 +147,10 @@
       msg: 'You can reach us at <a href="' + PHONE_LINK + '">' + PHONE + '</a> or <a href="mailto:info@renofy.ca">info@renofy.ca</a> \u2014 and we\u2019re <a href="https://www.instagram.com/renofy.homes/" target="_blank" rel="noopener">@renofy.homes</a> on Instagram. Or <a href="contact.html">send us a message \u2192</a>' },
     { re: /\b(how long|timeline|duration|take|finish|done)\b/i,
       msg: 'Typical timelines: painting 2\u20133 days, flooring 3\u20135 days, bathrooms 3\u20134 weeks, kitchens 4\u20136 weeks, full-home remodels 8\u201316 weeks. Your fixed quote includes a firm schedule before we start.' },
+    { re: /\b(enquir(y|ies)|inquir(y|ies)|enquire)\b|\bform\b/i,
+      msg: 'Tell us about your project \u2014 it takes a minute and lands straight with our team:<br><br>' +
+        '<a class="wa-btn" href="' + ZOHO_FORM + '" target="_blank" rel="noopener">\uD83D\uDCDD Open the enquiry form</a><br><br>' +
+        'Or <a href="contact.html">see all the ways to reach us \u2192</a>' },
     { re: /\b(book|consult|appointment|quote|estimate|callback|call me|call back|talk)\b/i, fn: 'BOOK' },
     { re: /\b(bot|ai|robot|artificial|who are you|your name)\b/i,
       msg: 'I\u2019m Renofy\u2019s virtual assistant \u2014 I can answer questions about services, pricing, areas and timelines instantly. For anything complex, I\u2019ll get you booked with the human crew.' },
@@ -158,8 +164,9 @@
   ];
 
   function startBooking() {
-    flow = { step: 'name' };
-    botSay('Great \u2014 let\u2019s get you booked in. What\u2019s your <b>name</b>?');
+    botSay('Pick a time that suits you \u2014 including <b>evenings and weekends</b>:<br><br>' +
+      '<a class="wa-btn" href="' + ZOHO_BOOK + '" target="_blank" rel="noopener">\uD83D\uDCC5 Book your free consultation</a><br><br>' +
+      'Prefer to message us instead? Tap <b>\uD83D\uDCAC WhatsApp us</b> below.', MAIN_CHIPS);
   }
 
   function handleFlow(text) {
