@@ -96,3 +96,11 @@
   });
 
 })();
+
+/* ---------- live chat widget (every page) ---------- */
+(function () {
+  var s = document.createElement('script');
+  s.src = 'assets/js/chat.js';
+  s.defer = true;
+  document.body.appendChild(s);
+})();
