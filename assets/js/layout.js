@@ -66,12 +66,12 @@
         '<div><h4>Get in touch</h4><ul class="foot-contact">' +
           '<li><b>Phone&nbsp;</b><a href="tel:+16476733696">+1 (647) 673 3696</a></li>' +
           '<li><b>Email&nbsp;</b><a href="mailto:info@renofy.ca">info@renofy.ca</a></li>' +
-          '<li><b>Hours&nbsp;</b><span>Mon–Sat, 8am–6pm</span></li>' +
+          '<li><b>Hours&nbsp;</b><span>Mon–Fri, 9am–5pm</span></li>' +
           '<li><b>Areas&nbsp;</b><span>Toronto & the GTA · Hamilton · Niagara · Waterloo Region · Barrie · London & beyond</span></li>' +
         '</ul></div>' +
       '</div>' +
       '<div class="foot-bottom">' +
-        '<span>© 2026 Renofy Renovations. All rights reserved.</span>' +
+        '<span>© 2026 Renofy. All rights reserved.</span>' +
         '<span class="script">Building Better Spaces</span>' +
         '<span>Licensed &amp; insured · 1-year craftsmanship warranty</span>' +
       '</div>' +
