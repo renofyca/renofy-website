@@ -73,7 +73,7 @@
       '<div class="foot-bottom">' +
         '<span>© 2026 Renofy Renovations. All rights reserved.</span>' +
         '<span class="script">Building Better Spaces</span>' +
-        '<span>Licensed &amp; insured · 5-year craftsmanship warranty</span>' +
+        '<span>Licensed &amp; insured · 1-year craftsmanship warranty</span>' +
       '</div>' +
     '</div>';
 
