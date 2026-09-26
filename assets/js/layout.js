@@ -21,7 +21,7 @@
 
   document.getElementById('site-header').innerHTML =
     '<div class="container nav-inner">' +
-      '<a class="brand" href="index.html" aria-label="Renofy home">' +
+      '<a class="brand" href="/" aria-label="Renofy home">' +
         '<img src="assets/logo.png?v=6" alt="Renofy logo">' +
         '<span class="wordmark grad-silver">RENOFY<small>Renovate · Redefine · Reimagine</small></span>' +
       '</a>' +
@@ -36,13 +36,13 @@
     '<div class="container">' +
       '<div class="foot-grid">' +
         '<div class="foot-brand">' +
-          '<a class="brand" href="index.html"><img src="assets/logo.png?v=6" alt="Renofy logo">' +
+          '<a class="brand" href="/"><img src="assets/logo.png?v=6" alt="Renofy logo">' +
           '<span class="wordmark grad-silver">RENOFY<small>Renovate · Redefine · Reimagine</small></span></a>' +
           '<p>Toronto\'s boldest renovation crew. We turn tired rooms into the reason you rush home — on time, on budget, and built to be stared at.</p>' +
           '<span class="script" style="font-size:1.6rem">Building Better Spaces</span>' +
         '</div>' +
         '<div><h4>Explore</h4><ul>' +
-          '<li><a href="index.html">Home</a></li>' +
+          '<li><a href="/">Home</a></li>' +
           '<li><a href="services.html">Services</a></li>' +
           '<li><a href="projects.html">Projects</a></li>' +
           '<li><a href="about.html">About</a></li>' +
