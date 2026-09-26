@@ -54,7 +54,7 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
 .grad-silver{background:var(--silver-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .grad-teal{background:linear-gradient(100deg,#7ff5e6,var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
 .grad-copper{background:linear-gradient(100deg,#ffcf8f,var(--copper));-webkit-background-clip:text;background-clip:text;color:transparent}
-.script{font-family:var(--font-script);font-weight:400;text-transform:none;letter-spacing:0;display:inline-block;line-height:1.35;padding:.08em .12em .22em;background:linear-gradient(100deg,#8a5f2b 0%,#c98f3e 30%,#ffe9b8 50%,#c98f3e 70%,#8a5f2b 100%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:script-shine 5s ease-in-out infinite alternate}@keyframes script-shine{from{background-position:0% center}to{background-position:100% center}}@media (prefers-reduced-motion:reduce){.script{animation:none}}
+.script{font-family:var(--font-script);font-weight:400;text-transform:none;letter-spacing:0;display:inline-block;line-height:1.35;padding:.08em .12em .62em;background:linear-gradient(100deg,#8a5f2b 0%,#c98f3e 30%,#ffe9b8 50%,#c98f3e 70%,#8a5f2b 100%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:script-shine 5s ease-in-out infinite alternate}@keyframes script-shine{from{background-position:0% center}to{background-position:100% center}}@media (prefers-reduced-motion:reduce){.script{animation:none}}
 .kicker{
   display:inline-flex;align-items:center;gap:.6rem;
   font-family:var(--font-body);font-size:.78rem;font-weight:600;
@@ -136,7 +136,7 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
 .hero h1 .row:nth-child(2)>span{animation-delay:.14s}
 .hero h1 .row:nth-child(3)>span{animation-delay:.28s}
 @keyframes riseUp{to{transform:translateY(0)}}
-.hero .script{font-size:clamp(1.6rem,3.4vw,2.6rem);margin-bottom:.5em}
+.hero .script{font-size:clamp(1.6rem,3.4vw,2.6rem);margin-bottom:.25em}
 .hero-sub{color:#d6d6de;max-width:56ch;font-size:1.08rem;margin-bottom:2.2rem}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
 .hero-chips{position:absolute;z-index:3;right:4%;bottom:14%;display:flex;flex-direction:column;gap:.8rem}
