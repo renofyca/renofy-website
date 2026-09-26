@@ -136,7 +136,7 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
 .hero h1 .row:nth-child(2)>span{animation-delay:.14s}
 .hero h1 .row:nth-child(3)>span{animation-delay:.28s}
 @keyframes riseUp{to{transform:translateY(0)}}
-.hero .script{font-size:clamp(1.6rem,3.4vw,2.6rem)}
+.hero .script{font-size:clamp(1.6rem,3.4vw,2.6rem);margin-bottom:.5em}
 .hero-sub{color:#d6d6de;max-width:56ch;font-size:1.08rem;margin-bottom:2.2rem}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
 .hero-chips{position:absolute;z-index:3;right:4%;bottom:14%;display:flex;flex-direction:column;gap:.8rem}
