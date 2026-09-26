@@ -1,6 +1,7 @@
 /* RENOFY — Contact form. Submits to Web3Forms (instant email) and to a
    Google Form receiver (feeds the live "Renofy Website Enquiries" sheet),
-   then swaps in a confirmation panel. */
+   then swaps in a confirmation panel. Booking uses the embedded Zoho
+   widget (live availability) above the submit button. */
 (function(){
   'use strict';
 
@@ -14,10 +15,8 @@
     phone:          'entry.1827519147',
     email:          'entry.1434579579',
     project_type:   'entry.2009336296',
-    message:        'entry.1636763234',
-    preferred_time: 'entry.837799985'
+    message:        'entry.1636763234'
   };
-  var ZOHO_BOOK = 'https://renofy.zohobookings.ca/renofy';
 
   function val(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; }
 
@@ -25,27 +24,6 @@
     return String(s).replace(/[&<>"']/g, function(c){
       return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c];
     });
-  }
-
-  /* "2026-09-30T14:30" -> "Wed, Sep 30 at 2:30 PM" */
-  function fmtSlot(v){
-    if(!v) return '';
-    var d = new Date(v);
-    if(isNaN(d.getTime())) return v;
-    var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    var h = d.getHours(), ap = h >= 12 ? 'PM' : 'AM';
-    h = h % 12 || 12;
-    return days[d.getDay()] + ', ' + months[d.getMonth()] + ' ' + d.getDate() +
-           ' at ' + h + ':' + ('0' + d.getMinutes()).slice(-2) + ' ' + ap;
-  }
-
-  /* Don't allow picking a past time. */
-  var slotEl = document.getElementById('qSlot');
-  if(slotEl){
-    var now = new Date();
-    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-    slotEl.min = now.toISOString().slice(0, 16);
   }
 
   form.addEventListener('submit', function(e){
@@ -56,7 +34,6 @@
     var email = val('qEmail');
     var type = val('qType');
     var msg = val('qMsg');
-    var slot = fmtSlot(val('qSlot'));
 
     if(!name || !phone){
       var missing = !name ? document.getElementById('qName') : document.getElementById('qPhone');
@@ -72,9 +49,7 @@
     /* 1) Web3Forms -> instant email to info@renofy.ca. This is the
           source of truth for the success UI. */
     var fd = new FormData(form);
-    fd.set('subject', 'New enquiry from renofy.ca \u2014 ' + name + ' (' + type + ')' +
-                       (slot ? ' \u2014 prefers ' + slot : ''));
-    if(slot) fd.set('preferred_time', slot);
+    fd.set('subject', 'New enquiry from renofy.ca \u2014 ' + name + ' (' + type + ')');
     if(email) fd.set('replyto', email);
 
     fetch('https://api.web3forms.com/submit', {
@@ -93,7 +68,6 @@
           if(email) g.set(GOOGLE_ENTRIES.email, email);
           g.set(GOOGLE_ENTRIES.project_type, type);
           if(msg) g.set(GOOGLE_ENTRIES.message, msg);
-          if(slot) g.set(GOOGLE_ENTRIES.preferred_time, slot);
           g.set('fvv', '1');
           g.set('draftResponse', '[]');
           g.set('pageHistory', '0');
@@ -103,7 +77,6 @@
 
         var thanks = 'Thanks, ' + escapeHtml(name.split(' ')[0]) +
           ' \u2014 we\u2019ll be in touch shortly (Mon\u2013Fri, 9\u20135).';
-        if(slot) thanks += ' We\u2019ll confirm your <b>' + escapeHtml(slot) + '</b> consultation.';
 
         form.outerHTML =
           '<div class="quiz-result" style="padding:1.5rem 0">' +
@@ -111,8 +84,6 @@
             '<h3 class="display" style="font-size:1.8rem;margin:1rem 0 .6rem;letter-spacing:.04em">Request received</h3>' +
             '<p class="lead" style="margin:0 auto 1.6rem;max-width:44ch">' + thanks + '</p>' +
             '<a href="tel:+16476733696" class="btn magnetic">Call (647) 673 3696</a>' +
-            '<p style="margin:1rem 0 0;font-size:.9rem;color:#9aa0a6">Want it locked in now? ' +
-              '<a href="' + ZOHO_BOOK + '" target="_blank" rel="noopener" style="color:var(--teal)">Pick your consultation time \u2192</a></p>' +
           '</div>';
       } else {
         throw new Error((data && data.message) || 'send failed');

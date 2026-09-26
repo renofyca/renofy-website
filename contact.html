@@ -138,10 +138,25 @@
             <textarea id="qMsg" name="message" placeholder="The room, the rough size, what you&apos;re dreaming of&hellip;"></textarea>
           </div>
           <div class="field">
-            <label for="qSlot">Preferred consultation time <span style="opacity:.55;font-weight:400">(optional)</span></label>
-            <input type="datetime-local" id="qSlot" name="preferred_time" style="color-scheme:dark">
-            <p style="margin:.4rem 0 0;font-size:.82rem;color:#9aa0a6">Mon&ndash;Fri, 9am&ndash;5pm &mdash; we&rsquo;ll confirm your slot.</p>
+            <label>Book your consultation <span style="opacity:.55;font-weight:400">(optional)</span></label>
+            <p style="margin:.4rem 0 .6rem;font-size:.82rem;color:#9aa0a6">Live availability &mdash; only open times are shown, and booking confirms instantly.</p>
+            <div id="zoho-booking-widget" style="border:1px solid rgba(255,255,255,.09);border-radius:14px;overflow:hidden;background:#101014;min-height:120px">
+              <div id="inline-container"></div>
+            </div>
+            <p style="margin:.5rem 0 0;font-size:.8rem;color:#9aa0a6">Trouble loading? <a href="https://renofy.zohobookings.ca/renofy" target="_blank" rel="noopener" style="color:var(--teal)">Book on our scheduling page &rarr;</a></p>
           </div>
+          <script src="https://bookings.nimbuspop.com/assets/embed.js"></script>
+          <script>
+            window.addEventListener('load', function(){
+              if(window.Bookings && Bookings.inlineEmbed){
+                Bookings.inlineEmbed({
+                  url: "https://renofy.zohobookings.ca/portal-embed#/165950000000031068",
+                  parent: "#inline-container",
+                  height: "600px"
+                });
+              }
+            });
+          </script>
           <button type="submit" class="btn magnetic" style="width:100%">Send my request</button>
         </form>
         <p style="text-align:center;margin-top:.75rem;font-size:.9rem;color:#9aa0a6">Prefer to talk? Call <a href="tel:+16476733696" style="color:var(--teal)">+1 (647) 673 3696</a></p>
@@ -234,6 +249,6 @@
 
 <script src="assets/js/layout.js?v=3"></script>
 <script src="assets/js/main.js?v=3"></script>
-<script src="assets/js/contact.js?v=2"></script>
+<script src="assets/js/contact.js?v=3"></script>
 </body>
 </html>
