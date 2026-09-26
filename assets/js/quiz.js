@@ -84,7 +84,7 @@
     }).join('');
     var back = i > 0 ? '<button type="button" class="quiz-back" id="quizBack">← Back</button>' : '';
     body.innerHTML =
-      '<div class="quiz-q"><h3>' + esc(q.q) + '</h3>' +
+      '<div class="quiz-q"><h2>' + esc(q.q) + '</h2>' +
       '<div class="quiz-opts">' + opts + '</div>' + back + '</div>';
     body.querySelectorAll('.quiz-opt').forEach(function(btn){
       btn.addEventListener('click', function(){
