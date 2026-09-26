@@ -86,6 +86,19 @@
 <link rel="stylesheet" href="assets/css/style.css?v=21">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=2">
 <link rel="apple-touch-icon" href="assets/favicon-180.png?v=2">
+<style>
+  .booking-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.85rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:#e8e8ea;font:inherit;cursor:pointer;transition:border-color .2s,background .2s}
+  .booking-toggle:hover{border-color:rgba(20,184,166,.5);background:rgba(20,184,166,.06)}
+  .booking-toggle .bt-opt{opacity:.55;font-weight:400;font-size:.85em}
+  .booking-toggle .bt-chev{color:var(--teal,#14b8a6);transition:transform .3s;font-size:1.1em;line-height:1}
+  .booking-toggle[aria-expanded="true"] .bt-chev{transform:rotate(180deg)}
+  .booking-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+  .booking-panel.open{grid-template-rows:1fr}
+  .booking-panel-inner{overflow:hidden;min-height:0}
+  .booking-note{margin:.6rem 0;font-size:.82rem;color:#9aa0a6}
+  .booking-note a{color:var(--teal,#14b8a6)}
+  #zoho-booking-widget{border:1px solid rgba(255,255,255,.09);border-radius:14px;overflow:hidden;background:#101014;min-height:120px;margin-top:.6rem}
+</style>
 </head>
 <body data-page="contact">
 
@@ -138,12 +151,19 @@
             <textarea id="qMsg" name="message" placeholder="The room, the rough size, what you&apos;re dreaming of&hellip;"></textarea>
           </div>
           <div class="field">
-            <label>Book your consultation <span style="opacity:.55;font-weight:400">(optional)</span></label>
-            <p style="margin:.4rem 0 .6rem;font-size:.82rem;color:#9aa0a6">Live availability &mdash; only open times are shown, and booking confirms instantly.</p>
-            <div id="zoho-booking-widget" style="border:1px solid rgba(255,255,255,.09);border-radius:14px;overflow:hidden;background:#101014;min-height:120px">
-              <div id="inline-container"></div>
+            <button type="button" class="booking-toggle" id="bookingToggle" aria-expanded="false" aria-controls="bookingPanel">
+              <span class="bt-text">Book your consultation <span class="bt-opt">(optional)</span></span>
+              <span class="bt-chev" aria-hidden="true">&#9662;</span>
+            </button>
+            <div class="booking-panel" id="bookingPanel">
+              <div class="booking-panel-inner">
+                <p class="booking-note">Live availability &mdash; only open times are shown, and booking confirms instantly.</p>
+                <div id="zoho-booking-widget">
+                  <div id="inline-container"></div>
+                </div>
+                <p class="booking-note">Trouble loading? <a href="https://renofy.zohobookings.ca/renofy" target="_blank" rel="noopener">Book on our scheduling page &rarr;</a></p>
+              </div>
             </div>
-            <p style="margin:.5rem 0 0;font-size:.8rem;color:#9aa0a6">Trouble loading? <a href="https://renofy.zohobookings.ca/renofy" target="_blank" rel="noopener" style="color:var(--teal)">Book on our scheduling page &rarr;</a></p>
           </div>
           <script src="https://bookings.nimbuspop.com/assets/embed.js"></script>
           <script>
@@ -156,6 +176,15 @@
                 });
               }
             });
+            (function(){
+              var t=document.getElementById('bookingToggle'),p=document.getElementById('bookingPanel');
+              if(!t||!p)return;
+              t.addEventListener('click',function(){
+                var open=t.getAttribute('aria-expanded')==='true';
+                t.setAttribute('aria-expanded',String(!open));
+                p.classList.toggle('open',!open);
+              });
+            })();
           </script>
           <button type="submit" class="btn magnetic" style="width:100%">Send my request</button>
         </form>
