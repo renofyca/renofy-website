@@ -42,7 +42,7 @@
   result.innerHTML =
     '<div class="passport">' +
       '<div class="stamp">Renofy Estimate</div>' +
-      '<h2>Project Passport</h2>' +
+      '<h3>Project Passport</h3>' +
       '<div class="row"><span>Project</span><b id="ppType">–</b></div>' +
       '<div class="row"><span>Size</span><b id="ppSize">–</b></div>' +
       '<div class="row"><span>Finish</span><b id="ppFinish">–</b></div>' +

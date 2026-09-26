@@ -5,7 +5,7 @@
   var page = document.body.getAttribute('data-page') || 'home';
 
   var NAV = [
-    ['home','Home','/'],
+    ['home','Home','index.html'],
     ['services','Services','services.html'],
     ['projects','Projects','projects.html'],
     ['about','About','about.html'],
@@ -21,8 +21,8 @@
 
   document.getElementById('site-header').innerHTML =
     '<div class="container nav-inner">' +
-      '<a class="brand" href="/" aria-label="Renofy home">' +
-        '<img src="assets/logo.webp?v=6" alt="Renofy logo">' +
+      '<a class="brand" href="index.html" aria-label="Renofy home">' +
+        '<img src="assets/logo.png?v=6" alt="Renofy logo">' +
         '<span class="wordmark grad-silver">RENOFY<small>Renovate · Redefine · Reimagine</small></span>' +
       '</a>' +
       '<ul class="nav-links" id="navLinks">' + links + '</ul>' +
@@ -36,20 +36,20 @@
     '<div class="container">' +
       '<div class="foot-grid">' +
         '<div class="foot-brand">' +
-          '<a class="brand" href="/"><img src="assets/logo.webp?v=6" alt="Renofy logo">' +
+          '<a class="brand" href="index.html"><img src="assets/logo.png?v=6" alt="Renofy logo">' +
           '<span class="wordmark grad-silver">RENOFY<small>Renovate · Redefine · Reimagine</small></span></a>' +
           '<p>Toronto\'s boldest renovation crew. We turn tired rooms into the reason you rush home — on time, on budget, and built to be stared at.</p>' +
           '<span class="script" style="font-size:1.6rem">Building Better Spaces</span>' +
         '</div>' +
-        '<div><h3>Explore</h3><ul>' +
-          '<li><a href="/">Home</a></li>' +
+        '<div><h4>Explore</h4><ul>' +
+          '<li><a href="index.html">Home</a></li>' +
           '<li><a href="services.html">Services</a></li>' +
           '<li><a href="projects.html">Projects</a></li>' +
           '<li><a href="about.html">About</a></li>' +
           '<li><a href="quiz.html">Style Quiz</a></li>' +
           '<li><a href="estimate.html">Instant Estimate</a></li>' +
         '</ul></div>' +
-        '<div><h3>Services</h3><ul>' +
+        '<div><h4>Services</h4><ul>' +
           '<li><a href="services.html#service-kitchen">Kitchen Remodeling</a></li>' +
           '<li><a href="services.html#service-bathroom">Bathroom Retreats</a></li>' +
           '<li><a href="services.html#service-basement">Basement Finishing</a></li>' +
@@ -57,13 +57,13 @@
           '<li><a href="services.html#service-painting">Painting</a></li>' +
           '<li><a href="services.html#service-stone">Quartz &amp; Quartzite</a></li>' +
         '</ul></div>' +
-        '<div><h3>Resources</h3><ul>' +
+        '<div><h4>Resources</h4><ul>' +
           '<li><a href="faq.html">Renovation FAQs</a></li>' +
           '<li><a href="areas.html">Service Areas</a></li>' +
           '<li><a href="kitchen-renovation-cost-toronto.html">Kitchen Cost Guide</a></li>' +
           '<li><a href="bathroom-renovation-cost-toronto.html">Bathroom Cost Guide</a></li>' +
         '</ul></div>' +
-        '<div><h3>Get in touch</h4><ul class="foot-contact">' +
+        '<div><h4>Get in touch</h4><ul class="foot-contact">' +
           '<li><b>Phone&nbsp;</b><a href="tel:+16476733696">+1 (647) 673 3696</a></li>' +
           '<li><b>Email&nbsp;</b><a href="mailto:info@renofy.ca">info@renofy.ca</a></li>' +
           '<li><b>Instagram&nbsp;</b><a href="https://www.instagram.com/renofy.homes/" target="_blank" rel="noopener">@renofy.homes</a></li>' +
