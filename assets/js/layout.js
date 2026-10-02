@@ -7,7 +7,7 @@
   var NAV = [
     ['home','Home','index.html'],
     ['services','Services','services.html'],
-    ['rta','RTA Kitchens','rta-kitchens.html'],
+    ['rta','RTA','rta-kitchens.html'],
     ['projects','Projects','projects.html'],
     ['about','About','about.html'],
     ['quiz','Style Quiz','quiz.html'],

@@ -108,8 +108,8 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
 .brand img{height:42px;width:auto}
 .brand .wordmark{font-family:var(--font-logo);font-weight:700;font-size:1.25rem;letter-spacing:.3em;line-height:1}
 .brand .wordmark small{display:block;font-family:var(--font-gothic);font-size:.62rem;letter-spacing:.22em;color:var(--teal);font-weight:400;margin-top:6px;text-transform:uppercase;white-space:nowrap}
-.nav-links{display:flex;align-items:center;gap:1.6rem;list-style:none}
-.nav-links a{font-family:var(--font-body);font-size:.86rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);position:relative;padding:.4rem 0;transition:color .25s}
+.nav-links{display:flex;align-items:center;gap:1.35rem;list-style:none}
+.nav-links a{font-family:var(--font-body);font-size:.86rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);position:relative;padding:.4rem 0;white-space:nowrap;transition:color .25s}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--grad-brand);transition:width .3s var(--ease)}
 .nav-links a:hover,.nav-links a.active{color:var(--text)}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%}
