@@ -51,7 +51,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500&family=Didact+Gothic&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=24">
+<link rel="stylesheet" href="assets/css/style.css?v=25">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=2">
 <link rel="apple-touch-icon" href="assets/favicon-180.png?v=2">
 <script type="application/ld+json">
@@ -84,7 +84,8 @@
     <div class="pl-logo-fill" id="plLogoFill"><img src="assets/logo.png?v=6" alt=""></div>
   </div>
   <div class="pl-word">Renofy</div>
-  <div class="pl-bar"><div class="pl-fill" id="plFill"></div></div>
+  <div class="pl-tagline">Renovate &middot; Redefine &middot; Reimagine</div>
+  <div class="pl-row"><div class="pl-bar"><div class="pl-fill" id="plFill"></div></div><div class="pl-count" id="plCount">0%</div></div>
   <div class="pl-line" id="plLine"></div>
 </div>
 
@@ -211,17 +212,17 @@
 (function(){
   var pre=document.getElementById('preloader');
   if(!pre) return;
-  var fill=document.getElementById('plFill'),logoFill=document.getElementById('plLogoFill'),line=document.getElementById('plLine');
+  var fill=document.getElementById('plFill'),logoFill=document.getElementById('plLogoFill'),line=document.getElementById('plLine'),count=document.getElementById('plCount');
   var lines=["Plotting the layout\u2026","Rendering the finishes\u2026","Connecting the rooms\u2026","Loading the floor plans\u2026","Building your experience\u2026"];
   var li=0; line.textContent=lines[0];
   var lineTimer=setInterval(function(){ li=(li+1)%lines.length; line.style.opacity=0;
-    setTimeout(function(){ line.textContent=lines[li]; line.style.opacity=1; },220); },900);
+    setTimeout(function(){ line.textContent=lines[li]; line.style.opacity=1; },180); },600);
   var start=performance.now(),DUR=1700,done=false;
   function finish(){ if(done) return; done=true; clearInterval(lineTimer);
     pre.classList.add('done'); setTimeout(function(){ pre.remove(); },700); }
   pre.addEventListener('click',finish);
   (function tick(t){ if(done) return; var p=Math.min((t-start)/DUR,1);
-    fill.style.width=(p*100).toFixed(1)+'%'; logoFill.style.height=(p*100).toFixed(1)+'%';
+    fill.style.width=(p*100).toFixed(1)+'%'; logoFill.style.height=(p*100).toFixed(1)+'%'; count.textContent=Math.round(p*100)+'%';
     if(p>=1) finish(); else requestAnimationFrame(tick); })(start);
   setTimeout(finish,2600);
 })();
