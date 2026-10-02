@@ -54,7 +54,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500&family=Didact+Gothic&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=27">
+<link rel="stylesheet" href="assets/css/style.css?v=26">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=2">
 <link rel="apple-touch-icon" href="assets/favicon-180.png?v=2">
 <style>
@@ -96,31 +96,9 @@
 
 <!-- Preloader -->
 <div id="preloader" aria-hidden="true">
-  <div class="pl-dust" id="plDust"></div>
-  <div class="pl-loader">
-    <div class="pl-stage">
-      <span class="pl-halo" id="plHalo"></span>
-      <img class="pl-ghost" src="assets/logo.png?v=6" alt="">
-      <span class="pl-liquid" id="plLiquid">
-        <img class="pl-color" src="assets/logo.png?v=6" alt="">
-        <i class="pl-surface" id="plSurface"></i>
-      </span>
-    </div>
-    <p class="pl-word">Renofy</p>
-    <p class="pl-tagline">Renovate &middot; Redefine &middot; Reimagine</p>
-    <div class="pl-line" id="plLine">
-      <span class="on">Plotting the layout&hellip;</span>
-      <span>Rendering the finishes&hellip;</span>
-      <span>Connecting the rooms&hellip;</span>
-      <span>Loading the floor plans&hellip;</span>
-      <span>Building your experience&hellip;</span>
-    </div>
-    <div class="pl-progress">
-      <div class="pl-track"><div class="pl-fill" id="plFill"></div></div>
-      <div class="pl-meta"><span>Building your experience</span><span class="pl-percent" id="plCount">0%</span></div>
-    </div>
-  </div>
-</div>
+  <div class="pl-logo-wrap">
+    <img class="pl-logo-dim" src="assets/logo.png?v=6" alt="">
+    <div class="pl-logo-fill" id="plLogoFill"><img src="assets/logo.png?v=6" alt=""></div>
   </div>
   <div class="pl-word">Renofy</div>
   <div class="pl-tagline">Renovate &middot; Redefine &middot; Reimagine</div>
@@ -219,46 +197,22 @@
 <script src="assets/js/layout.js?v=5"></script>
 <script src="assets/js/main.js?v=3"></script>
 <script>
-/* Preloader: liquid-fill logo + progress, max ~2.6s, skippable */
+/* Preloader: logo fills bottom-to-top in sync with progress, max ~2s, skippable */
 (function(){
   var pre=document.getElementById('preloader');
   if(!pre) return;
-  var liquid=document.getElementById('plLiquid'),surface=document.getElementById('plSurface'),
-      halo=document.getElementById('plHalo'),fill=document.getElementById('plFill'),
-      count=document.getElementById('plCount'),lineBox=document.getElementById('plLine'),
-      dust=document.getElementById('plDust');
-  var i,s;
-  for(i=0;i<28;i++){
-    s=document.createElement('i');s.className='pl-speck';
-    s.style.setProperty('--x',(3+Math.random()*94).toFixed(1)+'%');
-    s.style.setProperty('--s',(1+Math.random()*2.1).toFixed(1)+'px');
-    s.style.setProperty('--o',(0.14+Math.random()*.32).toFixed(2));
-    s.style.setProperty('--d',(9+Math.random()*10).toFixed(1)+'s');
-    s.style.setProperty('--delay',(-Math.random()*18).toFixed(1)+'s');
-    s.style.setProperty('--drift',(-30+Math.random()*60).toFixed(0)+'px');
-    dust.appendChild(s);
-  }
-  var lines=lineBox.querySelectorAll('span'),li=0;
-  var lineTimer=setInterval(function(){
-    lines[li].classList.remove('on');li=(li+1)%lines.length;lines[li].classList.add('on');
-  },550);
+  var fill=document.getElementById('plFill'),logoFill=document.getElementById('plLogoFill'),line=document.getElementById('plLine'),count=document.getElementById('plCount');
+  var lines=["Plotting the layout\u2026","Rendering the finishes\u2026","Connecting the rooms\u2026","Loading the floor plans\u2026","Building your experience\u2026"];
+  var li=0; line.textContent=lines[0];
+  var lineTimer=setInterval(function(){ li=(li+1)%lines.length; line.style.opacity=0;
+    setTimeout(function(){ line.textContent=lines[li]; line.style.opacity=1; },180); },600);
   var start=performance.now(),DUR=1700,done=false;
-  function ease(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}
-  function finish(){
-    if(done)return;done=true;clearInterval(lineTimer);
-    pre.classList.add('done');setTimeout(function(){pre.remove();},700);
-  }
+  function finish(){ if(done) return; done=true; clearInterval(lineTimer);
+    pre.classList.add('done'); setTimeout(function(){ pre.remove(); },700); }
   pre.addEventListener('click',finish);
-  (function tick(t){
-    if(done)return;
-    var p=Math.min((t-start)/DUR,1),e=ease(p);
-    liquid.style.height=(e*100).toFixed(1)+'%';
-    fill.style.width=(e*100).toFixed(1)+'%';
-    count.textContent=Math.round(e*100)+'%';
-    surface.style.opacity=p<1?(0.35+0.65*Math.sin(p*Math.PI)).toFixed(2):0;
-    halo.style.opacity=p>0.7?((p-0.7)/0.3*0.9).toFixed(2):0;
-    if(p>=1)finish();else requestAnimationFrame(tick);
-  })(start);
+  (function tick(t){ if(done) return; var p=Math.min((t-start)/DUR,1);
+    fill.style.width=(p*100).toFixed(1)+'%'; logoFill.style.height=(p*100).toFixed(1)+'%'; count.textContent=Math.round(p*100)+'%';
+    if(p>=1) finish(); else requestAnimationFrame(tick); })(start);
   setTimeout(finish,2600);
 })();
 </script>
