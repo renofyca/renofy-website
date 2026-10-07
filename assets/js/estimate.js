@@ -43,15 +43,13 @@
     '<div class="passport">' +
       '<div class="stamp" aria-hidden="true">' +
         '<svg viewBox="0 0 120 120">' +
-          '<defs><path id="stmpTop" d="M13,60 A47,47 0 0,1 107,60" fill="none"/>' +
-          '<path id="stmpBot" d="M13,60 A47,47 0 0,0 107,60" fill="none"/>' +
-          '<filter id="stmpInk" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/></filter></defs>' +
+          '<defs><filter id="stmpInk" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/></filter></defs>' +
           '<g filter="url(#stmpInk)">' +
           '<circle cx="60" cy="60" r="58" fill="none" stroke="currentColor" stroke-width="3.5"/>' +
           '<circle cx="60" cy="60" r="36" fill="none" stroke="currentColor" stroke-width="1.5"/>' +
-          '<text font-size="12.5" font-weight="700" fill="currentColor" letter-spacing="2"><textPath href="#stmpTop" startOffset="50%" text-anchor="middle">RENOFY ESTIMATE</textPath></text>' +
-          '<text font-size="12" font-weight="700" fill="currentColor" letter-spacing="6"><textPath href="#stmpBot" startOffset="50%" text-anchor="middle">&#9733; &#9733; &#9733;</textPath></text>' +
-          '<text x="60" y="70" text-anchor="middle" font-size="24" fill="currentColor">&#9733;</text>' +
+          '<text x="60" y="50" text-anchor="middle" font-size="13" fill="currentColor">&#9733;</text>' +
+          '<text x="60" y="67" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="1.5" fill="currentColor">RENOFY</text>' +
+          '<text x="60" y="82" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="1.5" fill="currentColor">ESTIMATE</text>' +
           '</g>' +
         '</svg>' +
       '</div>' +
