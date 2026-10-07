@@ -41,7 +41,18 @@
   /* ---------- passport card: built once, updated live ---------- */
   result.innerHTML =
     '<div class="passport">' +
-      '<div class="stamp">Renofy Estimate</div>' +
+      '<div class="stamp" aria-hidden="true">' +
+        '<svg viewBox="0 0 120 120">' +
+          '<defs><path id="stmpCirc" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0" fill="none"/>' +
+          '<filter id="stmpInk" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/></filter></defs>' +
+          '<g filter="url(#stmpInk)">' +
+          '<circle cx="60" cy="60" r="58" fill="none" stroke="currentColor" stroke-width="3.5"/>' +
+          '<circle cx="60" cy="60" r="36" fill="none" stroke="currentColor" stroke-width="1.5"/>' +
+          '<text font-size="12.5" font-weight="700" fill="currentColor" letter-spacing="1.5"><textPath href="#stmpCirc" textLength="293" lengthAdjust="spacingAndGlyphs">RENOFY ESTIMATE &#9733; RENOFY ESTIMATE &#9733;</textPath></text>' +
+          '<text x="60" y="70" text-anchor="middle" font-size="24" fill="currentColor">&#9733;</text>' +
+          '</g>' +
+        '</svg>' +
+      '</div>' +
       '<h3>Project Passport</h3>' +
       '<div class="row"><span>Project</span><b id="ppType">–</b></div>' +
       '<div class="row"><span>Size</span><b id="ppSize">–</b></div>' +
