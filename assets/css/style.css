@@ -388,9 +388,11 @@ input[type=range]{width:100%;accent-color:var(--copper);margin-top:.8rem}
 }
 @keyframes passIn{0%{transform:translateY(26px) rotate(-1.5deg);opacity:0}100%{transform:none;opacity:1}}
 .passport .stamp{
-  position:absolute;top:18px;right:-32px;transform:rotate(35deg);
-  border:2px solid var(--copper);color:var(--copper);font-family:var(--font-body);
-  font-size:.75rem;letter-spacing:.3em;padding:.45rem 2.6rem;text-transform:uppercase;opacity:.85;
+  position:absolute;top:16px;right:16px;transform:rotate(-8deg);
+  border:2px solid var(--copper);outline:1px solid var(--copper);outline-offset:3px;border-radius:4px;
+  color:var(--copper);font-family:var(--font-body);font-weight:700;
+  font-size:.72rem;letter-spacing:.22em;padding:.5rem .9rem;text-transform:uppercase;opacity:.92;white-space:nowrap;
+  box-shadow:0 0 0 1px rgba(0,0,0,.35);
 }
 .passport h3{font-family:var(--font-body);font-size:1.3rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.2rem}
 .passport .row{display:flex;justify-content:space-between;gap:1rem;padding:.65rem 0;border-bottom:1px dashed var(--line);font-size:.93rem}
