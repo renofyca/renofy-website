@@ -53,7 +53,7 @@
           '</g>' +
         '</svg>' +
       '</div>' +
-      '<h3>Project Passport</h3>' +
+      '<h3>Your Estimate</h3>' +
       '<div class="row"><span>Project</span><b id="ppType">–</b></div>' +
       '<div class="row"><span>Size</span><b id="ppSize">–</b></div>' +
       '<div class="row"><span>Finish</span><b id="ppFinish">–</b></div>' +
