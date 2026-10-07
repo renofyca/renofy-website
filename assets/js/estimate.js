@@ -48,7 +48,7 @@
           '<g filter="url(#stmpInk)">' +
           '<circle cx="60" cy="60" r="58" fill="none" stroke="currentColor" stroke-width="3.5"/>' +
           '<circle cx="60" cy="60" r="36" fill="none" stroke="currentColor" stroke-width="1.5"/>' +
-          '<text font-size="12.5" font-weight="700" fill="currentColor" letter-spacing="1.5"><textPath href="#stmpCirc" textLength="293" lengthAdjust="spacingAndGlyphs">RENOFY ESTIMATE &#9733; RENOFY ESTIMATE &#9733;</textPath></text>' +
+          '<text font-size="12.5" font-weight="700" fill="currentColor" letter-spacing="1.5"><textPath href="#stmpCirc" textLength="293" lengthAdjust="spacingAndGlyphs">RENOFY ESTIMATE &#9733;</textPath></text>' +
           '<text x="60" y="70" text-anchor="middle" font-size="24" fill="currentColor">&#9733;</text>' +
           '</g>' +
         '</svg>' +
