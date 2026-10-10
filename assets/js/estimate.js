@@ -42,14 +42,28 @@
   result.innerHTML =
     '<div class="passport">' +
       '<div class="stamp" aria-hidden="true">' +
-        '<svg viewBox="0 0 120 120">' +
-          '<defs><filter id="stmpInk" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/></filter></defs>' +
+        '<svg viewBox="0 0 200 200">' +
+          '<defs>' +
+            '<path id="estTop" d="M27,100 A73,73 0 0,1 173,100" fill="none"/>' +
+            '<path id="estBot" d="M27,100 A73,73 0 0,0 173,100" fill="none"/>' +
+            '<filter id="stmpInk" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/></filter>' +
+          '</defs>' +
           '<g filter="url(#stmpInk)">' +
-          '<circle cx="60" cy="60" r="58" fill="none" stroke="currentColor" stroke-width="3.5"/>' +
-          '<circle cx="60" cy="60" r="36" fill="none" stroke="currentColor" stroke-width="1.5"/>' +
-          '<text x="60" y="50" text-anchor="middle" font-size="13" fill="currentColor">&#9733;</text>' +
-          '<text x="60" y="67" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="1.5" fill="currentColor">RENOFY</text>' +
-          '<text x="60" y="82" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="1.5" fill="currentColor">ESTIMATE</text>' +
+            '<circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="7"/>' +
+            '<circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" stroke-width="2"/>' +
+            '<circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width="3"/>' +
+            '<text font-size="24" font-weight="700" fill="currentColor" letter-spacing="6"><textPath href="#estTop" startOffset="50%" text-anchor="middle">ESTIMATE</textPath></text>' +
+            '<text font-size="24" font-weight="700" fill="currentColor" letter-spacing="6"><textPath href="#estBot" startOffset="50%" text-anchor="middle">ESTIMATE</textPath></text>' +
+            '<text x="80" y="66" text-anchor="middle" font-size="13" fill="currentColor">&#9733;</text>' +
+            '<text x="100" y="60" text-anchor="middle" font-size="16" fill="currentColor">&#9733;</text>' +
+            '<text x="120" y="66" text-anchor="middle" font-size="13" fill="currentColor">&#9733;</text>' +
+            '<text x="80" y="143" text-anchor="middle" font-size="13" fill="currentColor">&#9733;</text>' +
+            '<text x="100" y="149" text-anchor="middle" font-size="16" fill="currentColor">&#9733;</text>' +
+            '<text x="120" y="143" text-anchor="middle" font-size="13" fill="currentColor">&#9733;</text>' +
+            '<g transform="rotate(-10 100 100)">' +
+              '<rect x="6" y="74" width="188" height="52" fill="#0e0e13" stroke="currentColor" stroke-width="6"/>' +
+              '<text x="100" y="112" text-anchor="middle" font-size="34" font-weight="900" letter-spacing="4" fill="currentColor">RENOFY</text>' +
+            '</g>' +
           '</g>' +
         '</svg>' +
       '</div>' +
