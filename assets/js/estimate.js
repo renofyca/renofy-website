@@ -44,16 +44,16 @@
       '<div class="stamp" aria-hidden="true">' +
         '<svg viewBox="0 0 200 200">' +
           '<defs>' +
-            '<path id="estTop" d="M27,100 A73,73 0 0,1 173,100" fill="none"/>' +
-            '<path id="estBot" d="M27,100 A73,73 0 0,0 173,100" fill="none"/>' +
+            '<path id="estTop" d="M30,100 A70,70 0 0,1 170,100" fill="none"/>' +
+            '<path id="estBot" d="M30,100 A70,70 0 0,0 170,100" fill="none"/>' +
             '<filter id="stmpInk" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/></filter>' +
           '</defs>' +
           '<g filter="url(#stmpInk)">' +
             '<circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="7"/>' +
             '<circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" stroke-width="2"/>' +
             '<circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width="3"/>' +
-            '<text font-size="24" font-weight="700" fill="currentColor" letter-spacing="6"><textPath href="#estTop" startOffset="50%" text-anchor="middle">ESTIMATE</textPath></text>' +
-            '<text font-size="24" font-weight="700" fill="currentColor" letter-spacing="6"><textPath href="#estBot" startOffset="50%" text-anchor="middle">ESTIMATE</textPath></text>' +
+            '<text font-size="19" font-weight="700" fill="currentColor" letter-spacing="4"><textPath href="#estTop" startOffset="50%" text-anchor="middle">ESTIMATE</textPath></text>' +
+            '<text font-size="19" font-weight="700" fill="currentColor" letter-spacing="4"><textPath href="#estBot" startOffset="50%" text-anchor="middle">ESTIMATE</textPath></text>' +
             '<text x="80" y="66" text-anchor="middle" font-size="13" fill="currentColor">&#9733;</text>' +
             '<text x="100" y="60" text-anchor="middle" font-size="16" fill="currentColor">&#9733;</text>' +
             '<text x="120" y="66" text-anchor="middle" font-size="13" fill="currentColor">&#9733;</text>' +
